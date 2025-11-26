@@ -24,5 +24,4 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     libswdap \
     libswgamedap \
-    libswvqe \
-    audio_effects_dolby.xml
+    libswvqe

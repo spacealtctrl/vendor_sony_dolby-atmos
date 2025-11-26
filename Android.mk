@@ -249,12 +249,3 @@ LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libswvqe.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Audio Effects Config with Dolby
-include $(CLEAR_VARS)
-LOCAL_MODULE := audio_effects_dolby.xml
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/audio/sku_kalama
-LOCAL_MODULE_STEM := audio_effects.xml
-LOCAL_SRC_FILES := system/vendor/etc/audio/sku_kalama/audio_effects.xml
-include $(BUILD_PREBUILT)
