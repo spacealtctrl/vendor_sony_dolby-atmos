@@ -65,6 +65,7 @@ LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin/hw
 LOCAL_SRC_FILES := system/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
 # HAL Init
