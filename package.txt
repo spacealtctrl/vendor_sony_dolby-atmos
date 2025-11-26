@@ -1,2 +1,0 @@
-com.dolby.daxappui2
-com.dolby.daxservice
