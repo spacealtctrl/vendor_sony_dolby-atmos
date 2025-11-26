@@ -92,6 +92,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_SRC_FILES := system/vendor/etc/media_codecs_dolby_audio.xml
+LOCAL_OVERRIDES_MODULES := media_codecs_dolby_audio
 include $(BUILD_PREBUILT)
 
 # Vendor libs
@@ -147,11 +148,13 @@ LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libstagefright_fdtn_dolby
 LOCAL_MODULE := libstagefright_foundation_dolby
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libstagefright_fdtn_dolby.so
 LOCAL_MODULE_STEM := libstagefright_foundation.so
 LOCAL_SRC_FILES := system/vendor/lib64/libstagefright_foundation.so
 LOCAL_CHECK_ELF_FILES := false
