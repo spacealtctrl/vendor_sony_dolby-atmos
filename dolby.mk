@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     libdlbpreg \
     libsqlite_dolby \
-    libstagefright_foundation_dolby \
+    libstagefright_fdtn_dolby \
     libstagefright_soft_ac4dec \
     libstagefright_soft_ddpdec \
     libstagefrightdolby \
