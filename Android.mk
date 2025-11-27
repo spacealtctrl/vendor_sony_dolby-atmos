@@ -256,3 +256,12 @@ LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libswvqe.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
+# Dolby Init Script
+include $(CLEAR_VARS)
+LOCAL_MODULE := init.dolby.rc
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES := etc/init.dolby.rc
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
+include $(BUILD_PREBUILT)
+

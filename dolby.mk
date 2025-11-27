@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     libswdap \
     libswgamedap \
-    libswvqe
+    libswvqe \
+    init.dolby.rc
 
 PRODUCT_COPY_FILES += \
     vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml
@@ -33,3 +34,11 @@ PRODUCT_COPY_FILES += \
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/dolby_framework_compatibility_matrix.xml
+
+# Dolby system properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.dolby.dax.version=DAX3_3.7.0.8_r1 \
+    ro.dolby.mod_uuid=false \
+    ro.dolby.music_stream=false \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false

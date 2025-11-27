@@ -1,23 +1,35 @@
 # Define Dolby hwservice type
 type hal_dms_hwservice, hwservice_manager_type;
 
-# Allow hal_audio_default to call itself (needed for DMS HAL)
-allow hal_audio_default hal_audio_default:binder call;
+# Allow hal_audio_default to access vendor_data_file (/data/vendor/dolby)
+allow hal_audio_default vendor_data_file:dir { create read write open getattr setattr search add_name remove_name };
+allow hal_audio_default vendor_data_file:file { create read write open getattr setattr unlink rename lock ioctl };
 
-# Allow hal_audio_default to register DMS hwservice
+# Allow hal_audio_default to call itself (needed for DMS HAL internal IPC)
+allow hal_audio_default hal_audio_default:binder { call transfer };
+
+# Allow hal_audio_default to register and find DMS hwservice
 allow hal_audio_default hal_dms_hwservice:hwservice_manager { add find };
 
-# Allow audioserver to access Dolby hwservice
+# Allow audioserver to find DMS hwservice
 allow audioserver hal_dms_hwservice:hwservice_manager find;
+allow audioserver hal_audio_default:binder { call transfer };
 
-# Allow platform_app (daxService) to find DMS hwservice
+# Allow platform_app (daxService) to access DMS hwservice
 allow platform_app hal_dms_hwservice:hwservice_manager find;
-
-# Allow platform_app (daxService) binder transfer with hal_audio_default
 allow platform_app hal_audio_default:binder { call transfer };
 allow hal_audio_default platform_app:binder { call transfer };
 
-# Allow apps to call audio HAL
-allow system_app hal_audio_default:binder call;
-allow priv_app hal_audio_default:binder call;
+# Allow other app types to call audio HAL for Dolby effects
+allow system_app hal_dms_hwservice:hwservice_manager find;
+allow system_app hal_audio_default:binder { call transfer };
+allow priv_app hal_dms_hwservice:hwservice_manager find;
+allow priv_app hal_audio_default:binder { call transfer };
+allow untrusted_app hal_dms_hwservice:hwservice_manager find;
 allow untrusted_app hal_audio_default:binder call;
+
+# Allow hal_audio_default to find default_android_hwservice (fallback)
+allow hal_audio_default default_android_hwservice:hwservice_manager find;
+
+# Init permissions for creating data directory
+allow init vendor_data_file:dir { create setattr };
