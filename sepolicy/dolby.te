@@ -1,9 +1,11 @@
 # Define Dolby hwservice type
 type hal_dms_hwservice, hwservice_manager_type;
 
+# Allow hal_audio_default to call itself (needed for DMS HAL)
+allow hal_audio_default hal_audio_default:binder call;
+
 # Allow audioserver and audio HAL to access Dolby hwservice
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
-allow hal_audio_default hal_dms_hwservice:hwservice_manager add;
 allow audioserver hal_dms_hwservice:hwservice_manager find;
 
 # Allow apps to call audio HAL
@@ -11,8 +13,3 @@ allow system_app hal_audio_default:binder call;
 allow priv_app hal_audio_default:binder call;
 allow platform_app hal_audio_default:binder call;
 allow untrusted_app hal_audio_default:binder call;
-
-# Allow Audio HAL to access Dolby data files
-allow hal_audio_default vendor_dolby_data_file:dir create_dir_perms;
-allow hal_audio_default vendor_dolby_data_file:file create_file_perms;
-allow platform_app hal_dms_hwservice:hwservice_manager find;
