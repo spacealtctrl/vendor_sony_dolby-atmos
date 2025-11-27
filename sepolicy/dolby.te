@@ -4,9 +4,14 @@ type hal_dms_hwservice, hwservice_manager_type;
 # Allow hal_audio_default to call itself (needed for DMS HAL)
 allow hal_audio_default hal_audio_default:binder call;
 
-# Allow audioserver and audio HAL to access Dolby hwservice
-allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+# Allow hal_audio_default to register DMS hwservice
+allow hal_audio_default hal_dms_hwservice:hwservice_manager { add find };
+
+# Allow audioserver to access Dolby hwservice
 allow audioserver hal_dms_hwservice:hwservice_manager find;
+
+# Allow platform_app (daxService) to find DMS hwservice
+allow platform_app hal_dms_hwservice:hwservice_manager find;
 
 # Allow apps to call audio HAL
 allow system_app hal_audio_default:binder call;
