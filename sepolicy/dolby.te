@@ -11,3 +11,7 @@ allow system_app hal_audio_default:binder call;
 allow priv_app hal_audio_default:binder call;
 allow platform_app hal_audio_default:binder call;
 allow untrusted_app hal_audio_default:binder call;
+
+# Allow Audio HAL to access Dolby data files
+allow hal_audio_default vendor_dolby_data_file:dir create_dir_perms;
+allow hal_audio_default vendor_dolby_data_file:file create_file_perms;
