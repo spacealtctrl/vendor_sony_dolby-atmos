@@ -13,8 +13,11 @@ allow audioserver hal_dms_hwservice:hwservice_manager find;
 # Allow platform_app (daxService) to find DMS hwservice
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 
+# Allow platform_app (daxService) binder transfer with hal_audio_default
+allow platform_app hal_audio_default:binder { call transfer };
+allow hal_audio_default platform_app:binder { call transfer };
+
 # Allow apps to call audio HAL
 allow system_app hal_audio_default:binder call;
 allow priv_app hal_audio_default:binder call;
-allow platform_app hal_audio_default:binder call;
 allow untrusted_app hal_audio_default:binder call;
