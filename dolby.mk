@@ -31,3 +31,5 @@ PRODUCT_COPY_FILES += \
     vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/dolby_framework_compatibility_matrix.xml
