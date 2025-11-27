@@ -142,7 +142,6 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_MODULE_STEM := libsqlite.so
 LOCAL_SRC_FILES := system/vendor/lib64/libsqlite.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
@@ -154,7 +153,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
 LOCAL_SRC_FILES := system/vendor/lib64/libstagefright_fdtn_dolby.so
-LOCAL_MODULE_STEM := libstagefright_foundation.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
