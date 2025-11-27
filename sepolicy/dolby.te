@@ -3,6 +3,7 @@ type hal_dms_hwservice, hwservice_manager_type;
 
 # Allow audioserver and audio HAL to access Dolby hwservice
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+allow hal_audio_default hal_dms_hwservice:hwservice_manager add;
 allow audioserver hal_dms_hwservice:hwservice_manager find;
 
 # Allow apps to call audio HAL
