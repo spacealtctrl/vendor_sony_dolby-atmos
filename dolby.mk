@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     config-com.dolby.daxappui2.xml \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.hardware.dms@2.0-service.rc \
+    vendor.dolby.hardware.dms@2.0-service.xml \
     dax-default.xml \
     media_codecs_dolby_audio.xml \
     libdapparamstorage \

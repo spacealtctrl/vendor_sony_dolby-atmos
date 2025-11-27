@@ -77,6 +77,15 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 LOCAL_SRC_FILES := unused/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 include $(BUILD_PREBUILT)
 
+# HAL VINTF Manifest
+include $(CLEAR_VARS)
+LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/vintf/manifest
+LOCAL_SRC_FILES := vendor.dolby.hardware.dms@2.0-service.xml
+include $(BUILD_PREBUILT)
+
 # Dolby Config
 include $(CLEAR_VARS)
 LOCAL_MODULE := dax-default.xml
