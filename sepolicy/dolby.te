@@ -1,0 +1,9 @@
+# Allow audioserver and audio HAL to access Dolby hwservice
+allow hal_audio_default hal_dms_hwservice hwservice_manager find;
+allow audioserver hal_dms_hwservice hwservice_manager find;
+
+# Allow apps to access Dolby
+allow system_app hal_audio_default binder call;
+allow priv_app hal_audio_default binder call;
+allow platform_app hal_audio_default binder call;
+allow untrusted_app hal_audio_default binder call;
