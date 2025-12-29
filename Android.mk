@@ -265,7 +265,7 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
-# Media Codecs from unused folder
+# Media Codecs configuration required for Dolby audio support (from upstream Magisk module unused folder)
 include $(CLEAR_VARS)
 LOCAL_MODULE := media_codecs_dolby
 LOCAL_MODULE_CLASS := ETC
