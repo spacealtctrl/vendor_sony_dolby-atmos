@@ -265,3 +265,21 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
+# Media Codecs configuration required for Dolby audio support (from upstream Magisk module unused folder)
+include $(CLEAR_VARS)
+LOCAL_MODULE := media_codecs_dolby
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := unused/vendor/etc/media_codecs.xml
+include $(BUILD_PREBUILT)
+
+# Dolby App Whitelist
+include $(CLEAR_VARS)
+LOCAL_MODULE := dax-applist.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
+LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
+include $(BUILD_PREBUILT)
+
