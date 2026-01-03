@@ -16,10 +16,10 @@
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/sony/dolby-atmos
+    vendor/dolby
 
 # Local Path
-LOCAL_AUDIO := vendor/sony/dolby-atmos
+LOCAL_AUDIO := vendor/dolby
 
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_AUDIO)/sepolicy/vendor
