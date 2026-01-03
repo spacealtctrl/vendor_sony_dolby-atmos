@@ -11,6 +11,8 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0-service.xml \
     dax-default.xml \
     media_codecs_dolby_audio.xml \
+    media_codecs_dolby \
+    dax-applist.xml \
     libdapparamstorage \
     libdeccfg \
     libdlbdsservice \
