@@ -21,14 +21,14 @@ Complete overhaul of the Dolby Atmos vendor repository with comprehensive audio 
 
 ### New Files
 - `Android.bp` - Modern Soong build system definitions for all modules
-- `audio.mk` - Comprehensive makefile with updated paths for vendor/sony/dolby-atmos
+- `audio.mk` - Comprehensive makefile with updated paths for vendor/dolby
 
 ### Removed Files
 - Old `Android.mk` structure (replaced by Android.bp + audio.mk)
 - Legacy `dolby.mk` references
 
 ### Build System Integration
-- **Soong Namespace**: `vendor/sony/dolby-atmos`
+- **Soong Namespace**: `vendor/dolby`
 - **SEPolicy**: Vendor, public, and private sepolicy directories
 - **HIDL**: Framework compatibility matrices for Dolby and 360RA
 - **Codec2**: Modern C2 audio codec framework with proper dependencies
@@ -279,7 +279,7 @@ Files that were moved to new locations with proper directory structure:
 Add to device makefile:
 ```makefile
 # Dolby Atmos & 360 Reality Audio
-$(call inherit-product, vendor/sony/dolby-atmos/audio.mk)
+$(call inherit-product, vendor/dolby/audio.mk)
 ```
 
 ### Required Dependencies
@@ -325,7 +325,7 @@ $(call inherit-product, vendor/sony/dolby-atmos/audio.mk)
 
 ## Verification Steps
 
-1. **Build Integration**: Verify PRODUCT_SOONG_NAMESPACES includes vendor/sony/dolby-atmos
+1. **Build Integration**: Verify PRODUCT_SOONG_NAMESPACES includes vendor/dolby
 2. **SEPolicy**: Check sepolicy builds without denials
 3. **HAL Services**: Ensure all 3 HAL services start successfully
 4. **Audio Codecs**: Test Dolby Digital Plus, AC-4, and MPEG-H playback
@@ -359,7 +359,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 - Licensed under Apache License 2.0
 - Prebuilt binaries: DO NOT MODIFY (check_elf_files disabled, strip=none)
 - Shell scripts require 755 permissions (auto-applied)
-- Vendor path updated to: `vendor/sony/dolby-atmos`
+- Vendor path updated to: `vendor/dolby`
 
 ---
 
