@@ -43,7 +43,8 @@ android_app_import {
 }
 
 android_app_import {
-	name: "MusicFX",
+	name: "SonyMusicFX",
+	overrides: ["MusicFX"],
 	apk: "proprietary/system_ext/priv-app/MusicFX/MusicFX.apk",
 	presigned: true,
 	dex_preopt: {
