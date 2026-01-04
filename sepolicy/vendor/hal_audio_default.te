@@ -4,7 +4,6 @@ r_dir_file(hal_audio_default, vendor_threesixtyra_data_file)
 allow hal_audio_default vendor_data_file:dir { create read write open getattr setattr search add_name remove_name };
 allow hal_audio_default vendor_data_file:file { create read write open getattr setattr unlink rename lock ioctl };
 
-allow hal_audio_default hal_dms_hwservice:hwservice_manager { add find };
 allow hal_audio_default vendor_hal_secd_hwservice:hwservice_manager { find };
 
 # Allow hal_audio_default to call itself (needed for DMS HAL internal IPC)
@@ -15,8 +14,6 @@ binder_call(hal_audio_default, platform_app)
 
 # Allow bidirectional binder communication with audioserver
 binder_call(hal_audio_default, audioserver)
-
-hal_client_domain(hal_audio_default, hal_dms)
 
 allow hal_audio_default gpu_device:chr_file rw_file_perms;
 
