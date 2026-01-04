@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
     <privapp-permissions package="com.android.musicfx">
-        <permission name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-        <permission name="android.permission.BLUETOOTH"/>
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
     </privapp-permissions>
 </permissions>
