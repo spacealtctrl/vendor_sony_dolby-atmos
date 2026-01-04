@@ -47,6 +47,7 @@ android_app_import {
 	overrides: ["MusicFX"],
 	apk: "proprietary/system_ext/priv-app/MusicFX/MusicFX.apk",
 	presigned: true,
+    preprocessed: true,
 	dex_preopt: {
 		enabled: false,
 	},
