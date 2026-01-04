@@ -43,6 +43,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "MusicFX",
+	apk: "proprietary/system_ext/priv-app/MusicFX/MusicFX.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
 	name: "SoundEnhancement",
 	owner: "sony",
 	apk: "proprietary/system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk",
