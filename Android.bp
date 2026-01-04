@@ -890,3 +890,39 @@ prebuilt_etc_xml {
     sub_dir: "vintf/manifest",
     soc_specific: true,
 }
+
+prebuilt_etc {
+    name: "privapp-com.dolby.daxservice.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml",
+    filename_from_src: true,
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "config-com.dolby.daxservice.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/sysconfig/config-com.dolby.daxservice.xml",
+    filename_from_src: true,
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "config-com.dolby.daxappui2.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/sysconfig/config-com.dolby.daxappui2.xml",
+    filename_from_src: true,
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "default-com.dolby.daxservice.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/default-permissions/default-com.dolby.daxservice.xml",
+    filename_from_src: true,
+    sub_dir: "default-permissions",
+    system_ext_specific: true,
+}

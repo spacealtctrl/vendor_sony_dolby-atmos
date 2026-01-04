@@ -48,14 +48,10 @@ PRODUCT_COPY_FILES += \
 # Blobs
 PRODUCT_COPY_FILES += \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/com.sonyericsson.soundenhancement.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.sonyericsson.soundenhancement.xml \
-    $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.dolby.daxservice.xml \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/com.sony.threesixtyra.audiofx.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.sony.threesixtyra.audiofx.xml \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/jp.co.sony.threesixtyra.system.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/jp.co.sony.threesixtyra.system.xml \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/com.sony.360ra.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.sony.360ra.xml \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/permissions/com.android.musicfx.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.musicfx.xml \
-    $(LOCAL_AUDIO)/proprietary/system_ext/etc/sysconfig/config-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxservice.xml \
-    $(LOCAL_AUDIO)/proprietary/system_ext/etc/sysconfig/config-com.dolby.daxappui2.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxappui2.xml \
-    $(LOCAL_AUDIO)/proprietary/system_ext/etc/default-permissions/default-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-com.dolby.daxservice.xml \
     $(LOCAL_AUDIO)/proprietary/system_ext/etc/default-permissions/default-permissions-360ra.apps.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-360ra.apps.xml \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/init/android.hardware.media.c2@1.0-threesixty-ra-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.0-threesixty-ra-service.rc \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
@@ -140,6 +136,10 @@ PRODUCT_ODM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     daxService \
     DolbySound \
+    privapp-com.dolby.daxservice.xml \
+    config-com.dolby.daxservice.xml \
+    config-com.dolby.daxappui2.xml \
+    default-com.dolby.daxservice.xml \
     SoundEnhancement \
     ThreeSixtyRASettings \
     ThreeSixtyRASystem \
