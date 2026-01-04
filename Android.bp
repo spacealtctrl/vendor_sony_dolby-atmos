@@ -895,6 +895,7 @@ prebuilt_etc {
     name: "privapp-com.dolby.daxservice.xml",
     owner: "sony",
     src: "proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml",
+    filename_from_src: true,
     sub_dir: "permissions",
     system_ext_specific: true,
 }
