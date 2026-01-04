@@ -142,4 +142,4 @@ PRODUCT_PACKAGES += \
     ThreeSixtyRASystem \
     ThreeSixtyRASystem-pdx234-Overlay \
     com.sony.threesixtyra.audiofx \
-    MusicFX
+    SonyMusicFX
