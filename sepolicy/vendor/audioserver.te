@@ -1,0 +1,3 @@
+# Allow audioserver to access DMS HAL for Dolby audio effects
+allow audioserver hal_dms_hwservice:hwservice_manager find;
+binder_call(audioserver, hal_audio_default)
