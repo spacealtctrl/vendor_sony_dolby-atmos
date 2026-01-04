@@ -33,7 +33,7 @@ android_app_import {
 	name: "DolbySound",
 	owner: "sony",
 	apk: "proprietary/system_ext/priv-app/DolbySound/DolbySound.apk",
-	overrides: ["AudioFX", "MusicFX"],
+	overrides: ["AudioFX"],
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
