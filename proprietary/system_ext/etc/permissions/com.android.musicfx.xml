@@ -2,5 +2,8 @@
 <permissions>
     <privapp-permissions package="com.android.musicfx">
         <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+        <permission name="android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT"/>
     </privapp-permissions>
 </permissions>

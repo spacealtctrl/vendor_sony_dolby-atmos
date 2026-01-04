@@ -925,3 +925,21 @@ prebuilt_etc {
     sub_dir: "default-permissions",
     system_ext_specific: true,
 }
+
+prebuilt_etc {
+    name: "config-com.android.musicfx.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/sysconfig/config-com.android.musicfx.xml",
+    filename_from_src: true,
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "default-com.android.musicfx.xml",
+    owner: "sony",
+    src: "proprietary/system_ext/etc/default-permissions/default-com.android.musicfx.xml",
+    filename_from_src: true,
+    sub_dir: "default-permissions",
+    system_ext_specific: true,
+}

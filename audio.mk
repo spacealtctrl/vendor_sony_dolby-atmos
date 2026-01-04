@@ -43,7 +43,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/windnoise_reduction_stat_back.data:$(TARGET_COPY_OUT_VENDOR)/etc/windnoise_reduction_stat_back.data \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/windnoise_reduction_back.data:$(TARGET_COPY_OUT_VENDOR)/etc/windnoise_reduction_back.data \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/XTC_speaker_coef.hki:$(TARGET_COPY_OUT_VENDOR)/etc/XTC_speaker_coef.hki \
-    $(LOCAL_AUDIO)/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+    $(LOCAL_AUDIO)/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    $(LOCAL_AUDIO)/proprietary/vendor/etc/dolby/dax-applist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-applist.xml \
+    $(LOCAL_AUDIO)/proprietary/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
+    $(LOCAL_AUDIO)/proprietary/etc/init.dolby.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init.dolby.rc
 
 # Blobs
 PRODUCT_COPY_FILES += \
@@ -145,4 +148,6 @@ PRODUCT_PACKAGES += \
     ThreeSixtyRASystem \
     ThreeSixtyRASystem-pdx234-Overlay \
     com.sony.threesixtyra.audiofx \
-    SonyMusicFX
+    SonyMusicFX \
+    config-com.android.musicfx.xml \
+    default-com.android.musicfx.xml

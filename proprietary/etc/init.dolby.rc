@@ -1,0 +1,6 @@
+on post-fs-data
+    mkdir /data/vendor/dolby 0770 media media
+    restorecon_recursive /data/vendor/dolby
+
+on property:sys.boot_completed=1
+    start vendor.dolby.hardware.dms@2.0-service
