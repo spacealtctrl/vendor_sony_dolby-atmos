@@ -1,1 +1,4 @@
 type vendor_threesixtyra_data_file, file_type, data_file_type;
+
+# Define a specific type for Dolby data files in /data/vendor/dolby
+type vendor_dolby_lib_data_file, file_type, data_file_type;
