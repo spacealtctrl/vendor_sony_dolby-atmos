@@ -1,0 +1,8 @@
+# Allow system apps to be clients of the DMS HAL
+hal_client_domain(system_app, hal_dms)
+
+# Allow system apps to find the DMS hwservice
+allow system_app hal_dms_hwservice:hwservice_manager find;
+
+# Binder communication with DMS HAL
+binder_call(system_app, hal_dms_default)

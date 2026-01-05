@@ -1,10 +1,36 @@
+# Dolby DMS HAL default domain
 type hal_dms_default, domain;
 hal_server_domain(hal_dms_default, hal_dms)
 
 type hal_dms_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_dms_default)
 
+# CRITICAL for Android 16: Attribute hwservice to allow registration
+hal_attribute_hwservice(hal_dms, hal_dms_hwservice)
+
+# CRITICAL for Android 16: Allow DMS HAL to register with hwservicemanager
+add_hwservice(hal_dms_default, hal_dms_hwservice)
+
+# Binder communication with audio HAL (required for audio effects)
+binder_call(hal_dms_default, hal_audio_default)
+binder_call(hal_audio_default, hal_dms_default)
+
+# Binder communication with apps
+binder_call(hal_dms_default, platform_app)
+binder_call(hal_dms_default, system_app)
+binder_call(hal_dms_default, priv_app)
+
+# Allow access to vendor data files
 allow hal_dms_default vendor_data_file:file create_file_perms;
 allow hal_dms_default vendor_data_file:dir rw_dir_perms;
 
-binder_call(hal_dms_default, platform_app)
+# Allow access to Dolby-specific data directory
+allow hal_dms_default vendor_dolby_data_file:dir create_dir_perms;
+allow hal_dms_default vendor_dolby_data_file:file create_file_perms;
+
+# Allow access to vendor configs
+allow hal_dms_default vendor_configs_file:dir r_dir_perms;
+allow hal_dms_default vendor_configs_file:file r_file_perms;
+
+# vndbinder usage
+vndbinder_use(hal_dms_default)

@@ -1,0 +1,8 @@
+# Allow audioserver to be a client of the DMS HAL
+hal_client_domain(audioserver, hal_dms)
+
+# Allow audioserver to find the DMS hwservice
+allow audioserver hal_dms_hwservice:hwservice_manager find;
+
+# Binder communication with DMS HAL
+binder_call(audioserver, hal_dms_default)
