@@ -1,4 +1,0 @@
-# Allow untrusted apps to find the DMS hwservice (if DolbySound runs as untrusted_app)
-# Note: This should only be enabled if the DolbySound app runs in untrusted_app domain
-# Most system apps run as system_app or priv_app, so this may not be needed
-allow untrusted_app hal_dms_hwservice:hwservice_manager find;
