@@ -215,6 +215,246 @@ LOCAL_SRC_FILES := system/vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libXtcApi
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libXtcApi.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libar-acdb
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libar-acdb.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libaudiokeymgr
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libaudiokeymgr.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libaudiosnpewrapper
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libaudiosnpewrapper.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libaudiosnpewrapper_context
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libaudiosnpewrapper_context.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libavenhancements
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libavenhancements.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_ac4dec
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_ac4dec.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_common_prebuilt
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_common_prebuilt.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_ddpdec
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_ddpdec.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_dolby
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_dolby.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_mha1dec
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_mha1dec.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_soft_mhm1dec
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_soft_mhm1dec.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcodec2_store_dolby
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libcodec2_store_dolby.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libiVptApi
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libiVptApi.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libiVptHkiDec
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libiVptHkiDec.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libiVptLibC
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libiVptLibC.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := liboem_specific
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/liboem_specific.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := librebuffering
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/librebuffering.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsfplugin_ccodec_utils_prebuilt
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libsfplugin_ccodec_utils_prebuilt.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libthreesixty_ra_codec2_store
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libthreesixty_ra_codec2_store.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libtsrspkenhance
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libtsrspkenhance.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libupmix-lib
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libupmix-lib.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libznr
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libznr.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := vendor.dolby.hardware.dms@2.0_prebuilt
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/vendor.dolby.hardware.dms@2.0_prebuilt.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
 # Soundfx libs
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdlbvol
