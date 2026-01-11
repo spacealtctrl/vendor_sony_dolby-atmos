@@ -104,6 +104,70 @@ LOCAL_SRC_FILES := system/vendor/etc/media_codecs_dolby_audio.xml
 LOCAL_OVERRIDES_MODULES := media_codecs_dolby_audio
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := media_codecs_sony_c2_audio.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/media_codecs_sony_c2_audio.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := XTC_speaker_coef.hki
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/XTC_speaker_coef.hki
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := alc.speaker.bin
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/alc.speaker.bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := dsx_param_file.bin
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/dsx_param_file.bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/windnoise_reduction.data
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction_back.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/windnoise_reduction_back.data
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction_stat.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/windnoise_reduction_stat.data
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction_stat_back.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := system/vendor/etc/windnoise_reduction_stat_back.data
+include $(BUILD_PREBUILT)
+
 # Vendor libs
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdapparamstorage
