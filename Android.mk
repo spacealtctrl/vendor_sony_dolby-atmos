@@ -1,6 +1,10 @@
 LOCAL_PATH := $(call my-dir)
 
-# MusicFX app (Android 16 version with Sony backend)
+# =========================================
+# APPS
+# =========================================
+
+# SonyMusicFX app (Android 16 version with Sony backend)
 include $(CLEAR_VARS)
 LOCAL_MODULE := SonyMusicFX
 LOCAL_MODULE_CLASS := APPS
@@ -40,7 +44,10 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SRC_FILES := system/priv-app/daxService/daxService.apk
 include $(BUILD_PREBUILT)
 
-# Permissions
+# =========================================
+# PERMISSIONS & CONFIGS
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := default-com.dolby.daxservice.xml
 LOCAL_MODULE_CLASS := ETC
@@ -73,7 +80,10 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/sysconfig
 LOCAL_SRC_FILES := DolbySound/permissions/config-com.dolby.daxappui2.xml
 include $(BUILD_PREBUILT)
 
-# HAL Service
+# =========================================
+# HAL SERVICE
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service
 LOCAL_MODULE_CLASS := EXECUTABLES
@@ -83,7 +93,6 @@ LOCAL_SRC_FILES := system/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# HAL Init
 include $(CLEAR_VARS)
 LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service.rc
 LOCAL_MODULE_CLASS := ETC
@@ -92,7 +101,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 LOCAL_SRC_FILES := vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 include $(BUILD_PREBUILT)
 
-# HAL VINTF Manifest
 include $(CLEAR_VARS)
 LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service.xml
 LOCAL_MODULE_CLASS := ETC
@@ -101,7 +109,10 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/vintf/manifest
 LOCAL_SRC_FILES := vendor.dolby.hardware.dms@2.0-service.xml
 include $(BUILD_PREBUILT)
 
-# Dolby Config
+# =========================================
+# DOLBY CONFIGS
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := dax-default.xml
 LOCAL_MODULE_CLASS := ETC
@@ -119,7 +130,26 @@ LOCAL_SRC_FILES := system/vendor/etc/media_codecs_dolby_audio.xml
 LOCAL_OVERRIDES_MODULES := media_codecs_dolby_audio
 include $(BUILD_PREBUILT)
 
-# Vendor libs
+include $(CLEAR_VARS)
+LOCAL_MODULE := media_codecs_dolby
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/etc/media_codecs.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := dax-applist.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
+LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
+include $(BUILD_PREBUILT)
+
+# =========================================
+# DOLBY LIBRARIES
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdapparamstorage
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -230,7 +260,10 @@ LOCAL_SRC_FILES := system/vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Soundfx libs (Dolby)
+# =========================================
+# DOLBY SOUNDFX LIBRARIES
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdlbvol
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -271,7 +304,10 @@ LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libswvqe.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Dolby Init Script
+# =========================================
+# INIT SCRIPTS
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := init.dolby.rc
 LOCAL_MODULE_TAGS := optional
@@ -280,28 +316,10 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
-# Modern Sony Stack - Legacy framework JARs removed (not available)
-# Using Modern Stack: com.sony.threesixtyra.audiofx, libavenhancements, etc.
+# =========================================
+# SONY STACK - FRAMEWORK
+# =========================================
 
-# Media Codecs configuration required for Dolby audio support
-include $(CLEAR_VARS)
-LOCAL_MODULE := media_codecs_dolby
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/etc/media_codecs.xml
-include $(BUILD_PREBUILT)
-
-# Dolby App Whitelist
-include $(CLEAR_VARS)
-LOCAL_MODULE := dax-applist.xml
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
-LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
-include $(BUILD_PREBUILT)
-
-# Sony 360RA AudioFX Framework JAR (Product partition)
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.sony.threesixtyra.audiofx
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
@@ -312,7 +330,10 @@ LOCAL_SRC_FILES := vendor/dolby/framework/com.sony.threesixtyra.audiofx.jar
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
-# Sony AV Enhancements native library (System_Ext)
+# =========================================
+# SONY STACK - NATIVE LIBRARIES
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := libavenhancements
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -324,7 +345,6 @@ LOCAL_SRC_FILES := vendor/dolby/lib64/libavenhancements.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Sony SoundFX Wrappers (Vendor)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libznrwrapper
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -335,7 +355,6 @@ LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libznrwrapper.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Sony System_Ext Helper Libraries
 include $(CLEAR_VARS)
 LOCAL_MODULE := libmmparserextractor
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -347,7 +366,10 @@ LOCAL_SRC_FILES := vendor/dolby/lib64/libmmparserextractor.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Sony 360RA Permissions (System_Ext)
+# =========================================
+# SONY STACK - PERMISSIONS
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.sony.360ra.xml
 LOCAL_MODULE_CLASS := ETC
@@ -366,7 +388,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
 LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sony.threesixtyra.audiofx.xml
 include $(BUILD_PREBUILT)
 
-# Sony SoundEnhancement permissions (System_Ext)
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.sonyericsson.soundenhancement.xml
 LOCAL_MODULE_CLASS := ETC
@@ -376,7 +397,10 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
 LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sonyericsson.soundenhancement.xml
 include $(BUILD_PREBUILT)
 
-# Sony ZNR (Noise Reduction) Data Files (Vendor)
+# =========================================
+# SONY STACK - DATA FILES
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := windnoise_reduction.data
 LOCAL_MODULE_CLASS := ETC
@@ -401,7 +425,10 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction_stat.data
 include $(BUILD_PREBUILT)
 
-# Sony Media Codec XML (Vendor)
+# =========================================
+# SONY STACK - CONFIG FILES
+# =========================================
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := media_codecs_sony_c2_audio.xml
 LOCAL_MODULE_CLASS := ETC
@@ -410,7 +437,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_SRC_FILES := vendor/dolby/etc/media_codecs_sony_c2_audio.xml
 include $(BUILD_PREBUILT)
 
-# Sony DSEE/DSX Audio Parameter Files (Vendor)
 include $(CLEAR_VARS)
 LOCAL_MODULE := dsx_param_file.bin
 LOCAL_MODULE_CLASS := ETC
@@ -426,4 +452,3 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_SRC_FILES := vendor/dolby/etc/alc.speaker.bin
 include $(BUILD_PREBUILT)
-
