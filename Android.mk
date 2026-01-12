@@ -1,4 +1,4 @@
-LOCAL_PATH := $(call my-dir)
+﻿LOCAL_PATH := $(call my-dir)
 
 # =========================================
 # APPS
@@ -29,7 +29,7 @@ LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/DolbySound/DolbySound.apk
+LOCAL_SRC_FILES := system_ext/priv-app/DolbySound/DolbySound.apk
 LOCAL_SYSTEM_EXT_MODULE := true
 include $(BUILD_PREBUILT)
 
@@ -42,7 +42,7 @@ LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/daxService/daxService.apk
+LOCAL_SRC_FILES := system_ext/priv-app/daxService/daxService.apk
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -58,7 +58,7 @@ LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRODUCT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk
+LOCAL_SRC_FILES := product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
@@ -72,7 +72,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRODUCT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/overlay
-LOCAL_SRC_FILES := vendor/dolby/product/overlay/ThreeSixtyRASystem-pdx234-Overlay.apk
+LOCAL_SRC_FILES := product/overlay/ThreeSixtyRASystem-pdx234-Overlay.apk
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -89,7 +89,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/ThreeSixtyRASystem/ThreeSixtyRASystem.apk
+LOCAL_SRC_FILES := system_ext/priv-app/ThreeSixtyRASystem/ThreeSixtyRASystem.apk
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
@@ -103,7 +103,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk
+LOCAL_SRC_FILES := system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
@@ -389,7 +389,7 @@ LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
 LOCAL_PRODUCT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/product/framework/com.sony.threesixtyra.audiofx.jar
+LOCAL_SRC_FILES := product/framework/com.sony.threesixtyra.audiofx.jar
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
@@ -404,7 +404,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
-LOCAL_SRC_FILES := vendor/dolby/system_ext/lib64/libavenhancements.so
+LOCAL_SRC_FILES := system_ext/lib64/libavenhancements.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -414,7 +414,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libznrwrapper.so
+LOCAL_SRC_FILES := lib64/soundfx/libznrwrapper.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -425,7 +425,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64/extractors
-LOCAL_SRC_FILES := vendor/dolby/system_ext/lib64/extractors/libmmparserextractor.so
+LOCAL_SRC_FILES := system_ext/lib64/extractors/libmmparserextractor.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -439,7 +439,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sony.360ra.xml
+LOCAL_SRC_FILES := etc/permissions/com.sony.360ra.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -448,7 +448,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sony.threesixtyra.audiofx.xml
+LOCAL_SRC_FILES := etc/permissions/com.sony.threesixtyra.audiofx.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -457,7 +457,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sonyericsson.soundenhancement.xml
+LOCAL_SRC_FILES := etc/permissions/com.sonyericsson.soundenhancement.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -466,7 +466,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/default-permissions
-LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/default-permissions/default-permissions-360ra.apps.xml
+LOCAL_SRC_FILES := system_ext/etc/default-permissions/default-permissions-360ra.apps.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -475,7 +475,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/permissions/com.dolby.daxservice.xml
+LOCAL_SRC_FILES := system_ext/etc/permissions/com.dolby.daxservice.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -484,7 +484,7 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/permissions/jp.co.sony.threesixtyra.system.xml
+LOCAL_SRC_FILES := system_ext/etc/permissions/jp.co.sony.threesixtyra.system.xml
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -496,7 +496,7 @@ LOCAL_MODULE := windnoise_reduction.data
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction.data
+LOCAL_SRC_FILES := etc/windnoise_reduction.data
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -504,7 +504,7 @@ LOCAL_MODULE := windnoise_reduction_back.data
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction_back.data
+LOCAL_SRC_FILES := etc/windnoise_reduction_back.data
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -512,7 +512,7 @@ LOCAL_MODULE := windnoise_reduction_stat.data
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction_stat.data
+LOCAL_SRC_FILES := etc/windnoise_reduction_stat.data
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -524,7 +524,7 @@ LOCAL_MODULE := media_codecs_sony_c2_audio.xml
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/media_codecs_sony_c2_audio.xml
+LOCAL_SRC_FILES := etc/media_codecs_sony_c2_audio.xml
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -532,7 +532,7 @@ LOCAL_MODULE := dsx_param_file.bin
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/dsx_param_file.bin
+LOCAL_SRC_FILES := etc/dsx_param_file.bin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -540,7 +540,7 @@ LOCAL_MODULE := alc.speaker.bin
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := vendor/dolby/etc/alc.speaker.bin
+LOCAL_SRC_FILES := etc/alc.speaker.bin
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -553,7 +553,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libXtcApi.so
+LOCAL_SRC_FILES := lib64/libXtcApi.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -563,7 +563,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libaudiokeymgr.so
+LOCAL_SRC_FILES := lib64/libaudiokeymgr.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -573,7 +573,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libaudiosnpewrapper.so
+LOCAL_SRC_FILES := lib64/libaudiosnpewrapper.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -583,7 +583,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libaudiosnpewrapper_context.so
+LOCAL_SRC_FILES := lib64/libaudiosnpewrapper_context.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -593,7 +593,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_ac4dec.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_ac4dec.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -603,7 +603,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_common_prebuilt.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_common_prebuilt.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -613,7 +613,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_ddpdec.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_ddpdec.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -623,7 +623,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_dolby.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_dolby.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -633,7 +633,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_mha1dec.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_mha1dec.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -643,7 +643,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_soft_mhm1dec.so
+LOCAL_SRC_FILES := lib64/libcodec2_soft_mhm1dec.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -653,7 +653,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libcodec2_store_dolby.so
+LOCAL_SRC_FILES := lib64/libcodec2_store_dolby.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -663,7 +663,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libiVptApi.so
+LOCAL_SRC_FILES := lib64/libiVptApi.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -673,7 +673,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libiVptHkiDec.so
+LOCAL_SRC_FILES := lib64/libiVptHkiDec.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -683,7 +683,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libiVptLibC.so
+LOCAL_SRC_FILES := lib64/libiVptLibC.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -693,7 +693,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/liboem_specific.so
+LOCAL_SRC_FILES := lib64/liboem_specific.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -703,7 +703,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/librebuffering.so
+LOCAL_SRC_FILES := lib64/librebuffering.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -713,7 +713,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libsfplugin_ccodec_utils_prebuilt.so
+LOCAL_SRC_FILES := lib64/libsfplugin_ccodec_utils_prebuilt.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -723,7 +723,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libthreesixty_ra_codec2_store.so
+LOCAL_SRC_FILES := lib64/libthreesixty_ra_codec2_store.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -733,7 +733,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libtsrspkenhance.so
+LOCAL_SRC_FILES := lib64/libtsrspkenhance.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -743,7 +743,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libupmix-lib.so
+LOCAL_SRC_FILES := lib64/libupmix-lib.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -753,7 +753,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libznr.so
+LOCAL_SRC_FILES := lib64/libznr.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -763,7 +763,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/vendor.dolby.hardware.dms@2.0_prebuilt.so
+LOCAL_SRC_FILES := lib64/vendor.dolby.hardware.dms@2.0_prebuilt.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -773,7 +773,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libbundlewrapper1.so
+LOCAL_SRC_FILES := lib64/soundfx/libbundlewrapper1.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -783,7 +783,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libbundlewrapper2.so
+LOCAL_SRC_FILES := lib64/soundfx/libbundlewrapper2.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -793,7 +793,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libbundlewrapper3.so
+LOCAL_SRC_FILES := lib64/soundfx/libbundlewrapper3.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -803,7 +803,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libbundlewrapper4.so
+LOCAL_SRC_FILES := lib64/soundfx/libbundlewrapper4.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -813,7 +813,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libdnnrwrapper.so
+LOCAL_SRC_FILES := lib64/soundfx/libdnnrwrapper.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -823,7 +823,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libtsrspatializer.so
+LOCAL_SRC_FILES := lib64/soundfx/libtsrspatializer.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -833,7 +833,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libtsrupmix.so
+LOCAL_SRC_FILES := lib64/soundfx/libtsrupmix.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -844,7 +844,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
-LOCAL_SRC_FILES := vendor/dolby/system_ext/lib64/vendor.dolby.hardware.dms@2.0.so
+LOCAL_SRC_FILES := system_ext/lib64/vendor.dolby.hardware.dms@2.0.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -857,7 +857,7 @@ LOCAL_MODULE := android.hardware.media.c2@1.0-threesixty-ra-service
 LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin/hw
-LOCAL_SRC_FILES := vendor/dolby/bin/hw/android.hardware.media.c2@1.0-threesixty-ra-service
+LOCAL_SRC_FILES := bin/hw/android.hardware.media.c2@1.0-threesixty-ra-service
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -866,7 +866,7 @@ LOCAL_MODULE := android.hardware.media.c2@1.0-threesixty-ra-service.rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
-LOCAL_SRC_FILES := vendor/dolby/etc/init/android.hardware.media.c2@1.0-threesixty-ra-service.rc
+LOCAL_SRC_FILES := etc/init/android.hardware.media.c2@1.0-threesixty-ra-service.rc
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -874,7 +874,7 @@ LOCAL_MODULE := vendor.dolby.media.c2@1.0-service
 LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin/hw
-LOCAL_SRC_FILES := vendor/dolby/bin/hw/vendor.dolby.media.c2@1.0-service
+LOCAL_SRC_FILES := bin/hw/vendor.dolby.media.c2@1.0-service
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -883,7 +883,7 @@ LOCAL_MODULE := vendor.dolby.media.c2@1.0-service.rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
-LOCAL_SRC_FILES := vendor/dolby/etc/init/vendor.dolby.media.c2@1.0-service.rc
+LOCAL_SRC_FILES := etc/init/vendor.dolby.media.c2@1.0-service.rc
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -891,7 +891,7 @@ LOCAL_MODULE := vendor.dolby.media.c2@1.0-service.xml
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/vintf/manifest
-LOCAL_SRC_FILES := vendor/dolby/etc/vintf/dms/vendor.dolby.media.c2@1.0-service.xml
+LOCAL_SRC_FILES := etc/vintf/dms/vendor.dolby.media.c2@1.0-service.xml
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -903,5 +903,5 @@ LOCAL_MODULE := com.dolby.daxservice.xml-etc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
-LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.dolby.daxservice.xml
+LOCAL_SRC_FILES := etc/permissions/com.dolby.daxservice.xml
 include $(BUILD_PREBUILT)
