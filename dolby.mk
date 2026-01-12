@@ -1,4 +1,4 @@
-﻿# Dolby Sound
+# Dolby Sound
 PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
@@ -44,7 +44,10 @@ PRODUCT_PACKAGES += \
     dsx_param_file.bin \
     alc.speaker.bin \
     XTC_speaker_coef.hki \
-    ThreeSixtyRASettings
+    ThreeSixtyRASettings \
+    ThreeSixtyRASystem \
+    ThreeSixtyRASystem-pdx234-Overlay \
+    SoundEnhancement
 
 PRODUCT_COPY_FILES += \
     system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
