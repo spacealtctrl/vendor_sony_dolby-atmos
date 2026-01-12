@@ -49,7 +49,47 @@ PRODUCT_PACKAGES += \
     windnoise_reduction_stat.data \
     media_codecs_sony_c2_audio.xml \
     dsx_param_file.bin \
-    alc.speaker.bin
+    alc.speaker.bin \
+    libXtcApi \
+    libaudiokeymgr \
+    libaudiosnpewrapper \
+    libaudiosnpewrapper_context \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_common_prebuilt \
+    libcodec2_soft_ddpdec \
+    libcodec2_soft_dolby \
+    libcodec2_soft_mha1dec \
+    libcodec2_soft_mhm1dec \
+    libcodec2_store_dolby \
+    libiVptApi \
+    libiVptHkiDec \
+    libiVptLibC \
+    liboem_specific \
+    librebuffering \
+    libsfplugin_ccodec_utils_prebuilt \
+    libthreesixty_ra_codec2_store \
+    libtsrspkenhance \
+    libupmix-lib \
+    libznr \
+    vendor.dolby.hardware.dms@2.0_prebuilt \
+    libbundlewrapper1 \
+    libbundlewrapper2 \
+    libbundlewrapper3 \
+    libbundlewrapper4 \
+    libdnnrwrapper \
+    libtsrspatializer \
+    libtsrupmix \
+    vendor.dolby.hardware.dms@2.0-system_ext \
+    android.hardware.media.c2@1.0-threesixty-ra-service \
+    android.hardware.media.c2@1.0-threesixty-ra-service.rc \
+    vendor.dolby.media.c2@1.0-service \
+    vendor.dolby.media.c2@1.0-service.rc \
+    vendor.dolby.media.c2@1.0-service.xml \
+    com.dolby.daxservice.xml-etc \
+    com.sony.threesixtyra.audiofx-framework \
+    libavenhancements-vendor \
+    libmmparserextractor-vendor \
+    libar-acdb
 
 PRODUCT_COPY_FILES += \
     vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
