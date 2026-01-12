@@ -2,6 +2,12 @@
 PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
+    com.sonymobile.somcmediarouter \
+    SemcAudioEffect \
+    libsonyeffect \
+    libsonypostprocbundle \
+    libsomc_audio \
+    privapp-sony-framework.xml \
     daxService \
     default-com.dolby.daxservice.xml \
     privapp-com.dolby.daxservice.xml \

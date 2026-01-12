@@ -279,6 +279,63 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
+# Sony Framework JARs for MusicFX
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sonymobile.somcmediarouter
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_SRC_FILES := framework/com.sonymobile.somcmediarouter.jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SemcAudioEffect
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_SRC_FILES := framework/SemcAudioEffect.jar
+include $(BUILD_PREBUILT)
+
+# Sony Native Libraries for MusicFX
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsonyeffect
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
+LOCAL_SRC_FILES := MusicFX/lib64/libsonyeffect.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsonypostprocbundle
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
+LOCAL_SRC_FILES := MusicFX/lib64/libsonypostprocbundle.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsomc_audio
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
+LOCAL_SRC_FILES := MusicFX/lib64/libsomc_audio.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+# Sony Framework Permissions
+include $(CLEAR_VARS)
+LOCAL_MODULE := privapp-sony-framework.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := etc/permissions/privapp-sony-framework.xml
+include $(BUILD_PREBUILT)
+
 # Media Codecs configuration required for Dolby audio support
 include $(CLEAR_VARS)
 LOCAL_MODULE := media_codecs_dolby
