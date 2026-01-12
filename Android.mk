@@ -41,7 +41,7 @@ LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_SRC_FILES := system/priv-app/daxService/daxService.apk
+LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/daxService/daxService.apk
 include $(BUILD_PREBUILT)
 
 # =========================================
@@ -388,7 +388,7 @@ LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .jar
 LOCAL_PRODUCT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/framework/com.sony.threesixtyra.audiofx.jar
+LOCAL_SRC_FILES := vendor/dolby/product/framework/com.sony.threesixtyra.audiofx.jar
 LOCAL_ENFORCE_USES_LIBRARIES := false
 include $(BUILD_PREBUILT)
 
@@ -403,7 +403,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libavenhancements.so
+LOCAL_SRC_FILES := vendor/dolby/system_ext/lib64/libavenhancements.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -423,8 +423,8 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
-LOCAL_SRC_FILES := vendor/dolby/lib64/libmmparserextractor.so
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64/extractors
+LOCAL_SRC_FILES := vendor/dolby/system_ext/lib64/extractors/libmmparserextractor.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
@@ -457,6 +457,33 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
 LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sonyericsson.soundenhancement.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := default-permissions-360ra.apps.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/default-permissions
+LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/default-permissions/default-permissions-360ra.apps.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.dolby.daxservice.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
+LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/permissions/com.dolby.daxservice.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := jp.co.sony.threesixtyra.system.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
+LOCAL_SRC_FILES := vendor/dolby/system_ext/etc/permissions/jp.co.sony.threesixtyra.system.xml
 include $(BUILD_PREBUILT)
 
 # =========================================

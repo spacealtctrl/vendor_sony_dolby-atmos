@@ -41,6 +41,9 @@ PRODUCT_PACKAGES += \
     com.sony.360ra.xml \
     com.sony.threesixtyra.audiofx.xml \
     com.sonyericsson.soundenhancement.xml \
+    default-permissions-360ra.apps.xml \
+    com.dolby.daxservice.xml \
+    jp.co.sony.threesixtyra.system.xml \
     windnoise_reduction.data \
     windnoise_reduction_back.data \
     windnoise_reduction_stat.data \
