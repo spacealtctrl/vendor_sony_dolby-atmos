@@ -45,6 +45,68 @@ LOCAL_SRC_FILES := system/priv-app/daxService/daxService.apk
 include $(BUILD_PREBUILT)
 
 # =========================================
+# SONY 360RA APPS (Product Partition)
+# =========================================
+
+# ThreeSixtyRASettings app (product partition)
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASettings
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRODUCT_MODULE := true
+LOCAL_SRC_FILES := vendor/dolby/product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk
+LOCAL_ENFORCE_USES_LIBRARIES := false
+include $(BUILD_PREBUILT)
+
+# ThreeSixtyRASystem overlay (product partition)
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASystem-pdx234-Overlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRODUCT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/overlay
+LOCAL_SRC_FILES := vendor/dolby/product/overlay/ThreeSixtyRASystem-pdx234-Overlay.apk
+include $(BUILD_PREBUILT)
+
+# =========================================
+# SONY 360RA APPS (System_ext Partition)
+# =========================================
+
+# ThreeSixtyRASystem priv-app (system_ext partition)
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASystem
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/ThreeSixtyRASystem/ThreeSixtyRASystem.apk
+LOCAL_ENFORCE_USES_LIBRARIES := false
+include $(BUILD_PREBUILT)
+
+# SoundEnhancement priv-app (system_ext partition)
+include $(CLEAR_VARS)
+LOCAL_MODULE := SoundEnhancement
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := vendor/dolby/system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk
+LOCAL_ENFORCE_USES_LIBRARIES := false
+include $(BUILD_PREBUILT)
+
+# =========================================
 # PERMISSIONS & CONFIGS
 # =========================================
 

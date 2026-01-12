@@ -3,6 +3,10 @@ PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
     daxService \
+    ThreeSixtyRASettings \
+    ThreeSixtyRASystem-pdx234-Overlay \
+    ThreeSixtyRASystem \
+    SoundEnhancement \
     default-com.dolby.daxservice.xml \
     privapp-com.dolby.daxservice.xml \
     config-com.dolby.daxservice.xml \
