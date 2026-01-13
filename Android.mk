@@ -314,6 +314,7 @@ LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 LOCAL_PRODUCT_MODULE := true
+LOCAL_ENFORCE_USES_LIBRARIES := false
 LOCAL_SRC_FILES := proprietary/product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk
 include $(BUILD_PREBUILT)
 
