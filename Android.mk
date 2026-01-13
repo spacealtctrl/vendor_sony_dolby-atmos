@@ -265,3 +265,91 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_SRC_FILES := proprietary/vendor/etc/alc.speaker.bin
 include $(BUILD_PREBUILT)
+
+# =========================================
+# RESTORED APK MODULES
+# =========================================
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := DolbySound
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := proprietary/system_ext/priv-app/DolbySound/DolbySound.apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := daxService
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := proprietary/system_ext/priv-app/daxService/daxService.apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SoundEnhancement
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := proprietary/system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASettings
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRODUCT_MODULE := true
+LOCAL_SRC_FILES := proprietary/product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASystem
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := proprietary/system_ext/priv-app/ThreeSixtyRASystem/ThreeSixtyRASystem.apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASystem-pdx234-Overlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRODUCT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/overlay
+LOCAL_SRC_FILES := proprietary/product/overlay/ThreeSixtyRASystem-pdx234-Overlay.apk
+include $(BUILD_PREBUILT)
+
+# =========================================
+# RESTORED SERVICE BINARY
+# =========================================
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin/hw
+LOCAL_SRC_FILES := proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
