@@ -48,8 +48,7 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     libswdap \
     libswgamedap \
-    libswvqe \
-    libhwdap
+    libswvqe
 
 # 32-bit Vendor Libraries
 PRODUCT_PACKAGES += \
@@ -67,8 +66,7 @@ PRODUCT_PACKAGES += \
     libdlbvol_32 \
     libswdap_32 \
     libswgamedap_32 \
-    libswvqe_32 \
-    libhwdap_32
+    libswvqe_32
 
 # Symlink for libstagefright_foundation.so compatibility
 PRODUCT_PACKAGES += \

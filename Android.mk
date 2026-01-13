@@ -306,17 +306,6 @@ LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libswvqe.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Hardware DAP library (lib64/soundfx) - NEW
-include $(CLEAR_VARS)
-LOCAL_MODULE := libhwdap
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
-LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libhwdap.so
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
 # ============================================================================
 # 32-BIT VENDOR LIBRARIES (lib) - NEW SECTION
 # ============================================================================
@@ -466,19 +455,6 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/soundfx
 LOCAL_SRC_FILES := system/vendor/lib/soundfx/libswvqe.so
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
-# Hardware DAP library 32-bit (lib/soundfx) - NEW
-include $(CLEAR_VARS)
-LOCAL_MODULE := libhwdap_32
-LOCAL_MODULE_STEM := libhwdap
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MULTILIB := 32
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/soundfx
-LOCAL_SRC_FILES := system/vendor/lib/soundfx/libhwdap.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 

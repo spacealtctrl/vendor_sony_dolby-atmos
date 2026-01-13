@@ -10,7 +10,6 @@
 /(vendor|system/vendor)/lib64/soundfx/libswgamedap\.so   u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/soundfx/libswvqe\.so       u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/soundfx/libdlbvol\.so      u:object_r:same_process_hal_file:s0
-/(vendor|system/vendor)/lib64/soundfx/libhwdap\.so       u:object_r:same_process_hal_file:s0
 
 # Vendor libraries (lib64)
 /(vendor|system/vendor)/lib64/libdapparamstorage\.so     u:object_r:same_process_hal_file:s0
@@ -35,7 +34,6 @@
 /(vendor|system/vendor)/lib/soundfx/libswgamedap\.so     u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/soundfx/libswvqe\.so         u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/soundfx/libdlbvol\.so        u:object_r:same_process_hal_file:s0
-/(vendor|system/vendor)/lib/soundfx/libhwdap\.so         u:object_r:same_process_hal_file:s0
 
 # Vendor libraries (lib - 32-bit)
 /(vendor|system/vendor)/lib/libdapparamstorage\.so       u:object_r:same_process_hal_file:s0
