@@ -3,10 +3,6 @@ PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
     daxService \
-    default-com.dolby.daxservice.xml \
-    privapp-com.dolby.daxservice.xml \
-    config-com.dolby.daxservice.xml \
-    config-com.dolby.daxappui2.xml \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.hardware.dms@2.0-service.rc \
     vendor.dolby.hardware.dms@2.0-service.xml \
@@ -52,7 +48,11 @@ PRODUCT_COPY_FILES += \
     system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
     MusicFX/permissions/privapp-permissions-musicfx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-musicfx.xml \
     etc/sysconfig/musicfx_hidden.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/musicfx_hidden.xml \
-    vendor/dolby/etc/XTC_speaker_coef.hki:$(TARGET_COPY_OUT_VENDOR)/etc/XTC_speaker_coef.hki
+    vendor/dolby/etc/XTC_speaker_coef.hki:$(TARGET_COPY_OUT_VENDOR)/etc/XTC_speaker_coef.hki \
+    DolbySound/permissions/default-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.dolby.daxservice.xml \
+    DolbySound/permissions/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-com.dolby.daxservice.xml \
+    DolbySound/permissions/config-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.dolby.daxservice.xml \
+    DolbySound/permissions/config-com.dolby.daxappui2.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.dolby.daxappui2.xml
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy
 
