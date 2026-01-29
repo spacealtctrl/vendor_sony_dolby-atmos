@@ -30,3 +30,20 @@ allow untrusted_app hal_audio_default:binder call;
 
 # Init permissions for creating data directory
 allow init vendor_data_file:dir { create setattr };
+
+# ==========================================
+# 360 Reality Audio SELinux Policy
+# ==========================================
+
+# Define 360RA vendor data file type
+type threesixtyra_vendor_data_file, file_type, data_file_type;
+
+# Allow apps to access 360RA data directory
+allow { system_app priv_app platform_app } threesixtyra_vendor_data_file:dir { write search remove_name add_name };
+allow { system_app priv_app platform_app } threesixtyra_vendor_data_file:file { write unlink create open setattr };
+
+# Allow audio HAL to read 360RA config
+allow hal_audio_default threesixtyra_vendor_data_file:dir search;
+allow hal_audio_default threesixtyra_vendor_data_file:file { getattr read open };
+allow audioserver threesixtyra_vendor_data_file:dir search;
+allow audioserver threesixtyra_vendor_data_file:file { getattr read open };

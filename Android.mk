@@ -283,3 +283,84 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
 LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
 include $(BUILD_PREBUILT)
 
+# ==========================================
+# 360 Reality Audio
+# ==========================================
+
+# ThreeSixtyRASystem app
+include $(CLEAR_VARS)
+LOCAL_MODULE := ThreeSixtyRASystem
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SRC_FILES := ThreeSixtyRA/priv-app/ThreeSixtyRASystem/ThreeSixtyRASystem.apk
+include $(BUILD_PREBUILT)
+
+# 360RA Framework JAR
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sony.threesixtyra.audiofx
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_MODULE_PATH := $(TARGET_OUT)/framework
+LOCAL_SRC_FILES := ThreeSixtyRA/framework/com.sony.threesixtyra.audiofx.jar
+LOCAL_UNINSTALLABLE_MODULE := true
+include $(BUILD_PREBUILT)
+
+# 360RA Permissions
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sony.threesixtyra.audiofx.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := ThreeSixtyRA/permissions/com.sony.threesixtyra.audiofx.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := default-jp.co.sony.threesixtyra.system.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/default-permissions
+LOCAL_SRC_FILES := ThreeSixtyRA/permissions/default-jp.co.sony.threesixtyra.system.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := privapp-jp.co.sony.threesixtyra.system.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := ThreeSixtyRA/permissions/privapp-jp.co.sony.threesixtyra.system.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := config-jp.co.sony.threesixtyra.system.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/sysconfig
+LOCAL_SRC_FILES := ThreeSixtyRA/permissions/config-jp.co.sony.threesixtyra.system.xml
+include $(BUILD_PREBUILT)
+
+# 360RA Vendor Libs
+include $(CLEAR_VARS)
+LOCAL_MODULE := libupmix-lib
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_SRC_FILES := system/vendor/lib64/libupmix-lib.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libtsrupmix
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
+LOCAL_SRC_FILES := system/vendor/lib64/soundfx/libtsrupmix.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+

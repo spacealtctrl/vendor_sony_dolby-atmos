@@ -14,3 +14,8 @@
 /(vendor|system/vendor)/lib64/libsqlite_dolby\.so        u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/vendor\.dolby\.hardware\.dms@2\.0\.so  u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service   u:object_r:hal_audio_default_exec:s0
+
+# 360 Reality Audio
+/data/vendor/threesixtyra(/.*)?                              u:object_r:threesixtyra_vendor_data_file:s0
+/(vendor|system/vendor)/lib64/libupmix-lib\.so               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/soundfx/libtsrupmix\.so        u:object_r:same_process_hal_file:s0

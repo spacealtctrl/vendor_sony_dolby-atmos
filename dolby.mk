@@ -44,3 +44,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.dolby.music_stream=false \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false
+
+# 360 Reality Audio
+PRODUCT_PACKAGES += \
+    ThreeSixtyRASystem \
+    com.sony.threesixtyra.audiofx \
+    com.sony.threesixtyra.audiofx.xml \
+    default-jp.co.sony.threesixtyra.system.xml \
+    privapp-jp.co.sony.threesixtyra.system.xml \
+    config-jp.co.sony.threesixtyra.system.xml \
+    libupmix-lib \
+    libtsrupmix
+
+# 360RA Boot JAR
+PRODUCT_BOOT_JARS += \
+    com.sony.threesixtyra.audiofx
+
+# 360RA system properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log
