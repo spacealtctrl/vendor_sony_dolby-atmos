@@ -63,3 +63,6 @@ PRODUCT_PACKAGES += \
 # 360RA system properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=log
+
+# Bypass verify_uses_libraries check for prebuilt APKs
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true

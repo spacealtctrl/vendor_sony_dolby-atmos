@@ -45,5 +45,5 @@ allow { system_app priv_app platform_app } threesixtyra_vendor_data_file:file { 
 # Allow audio HAL to read 360RA config
 allow hal_audio_default threesixtyra_vendor_data_file:dir search;
 allow hal_audio_default threesixtyra_vendor_data_file:file { getattr read open };
-allow audioserver threesixtyra_vendor_data_file:dir search;
-allow audioserver threesixtyra_vendor_data_file:file { getattr read open };
+# allow audioserver threesixtyra_vendor_data_file:dir search;
+# allow audioserver threesixtyra_vendor_data_file:file { getattr read open };
