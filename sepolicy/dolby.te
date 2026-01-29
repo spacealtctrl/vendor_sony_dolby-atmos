@@ -37,6 +37,7 @@ allow init vendor_data_file:dir { create setattr };
 
 # Define 360RA vendor data file type
 type threesixtyra_vendor_data_file, file_type, data_file_type;
+typeattribute threesixtyra_vendor_data_file data_between_core_and_vendor_violators;
 
 # Allow apps to access 360RA data directory
 allow { system_app priv_app platform_app } threesixtyra_vendor_data_file:dir { write search remove_name add_name };
@@ -45,5 +46,5 @@ allow { system_app priv_app platform_app } threesixtyra_vendor_data_file:file { 
 # Allow audio HAL to read 360RA config
 allow hal_audio_default threesixtyra_vendor_data_file:dir search;
 allow hal_audio_default threesixtyra_vendor_data_file:file { getattr read open };
-# allow audioserver threesixtyra_vendor_data_file:dir search;
-# allow audioserver threesixtyra_vendor_data_file:file { getattr read open };
+allow audioserver threesixtyra_vendor_data_file:dir search;
+allow audioserver threesixtyra_vendor_data_file:file { getattr read open };
