@@ -267,10 +267,10 @@ include $(BUILD_PREBUILT)
 
 # 360RA Init Script
 include $(CLEAR_VARS)
-LOCAL_MODULE := init.sony-platform.rc
+LOCAL_MODULE := init.360ra.rc
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := etc/init.sony-platform.rc
+LOCAL_SRC_FILES := etc/init.360ra.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
