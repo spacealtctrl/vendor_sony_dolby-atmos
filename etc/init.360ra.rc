@@ -1,5 +1,10 @@
 on post-fs-data
     mkdir /data/vendor/360ra 0775 audioserver audio
-    copy /vendor/etc/alc.speaker.bin /data/vendor/360ra/alc.speaker.bin
-    chmod 0770 /data/vendor/360ra/alc.speaker.bin
-    chown audioserver audio /data/vendor/360ra/alc.speaker.bin
+    # copy /vendor/etc/alc.speaker.bin /data/vendor/360ra/alc.speaker.bin
+    # chmod 0770 /data/vendor/360ra/alc.speaker.bin
+    # chown audioserver audio /data/vendor/360ra/alc.speaker.bin
+
+    # 360RA Properties
+    setprop vendor.360ra.effect 1
+    setprop ro.360ra.music_stream false
+

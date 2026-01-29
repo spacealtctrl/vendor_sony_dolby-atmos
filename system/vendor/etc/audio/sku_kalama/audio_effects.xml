@@ -140,7 +140,7 @@
         <effect name="vqe" library="vqe" uuid="64c04eac-0d4f-4685-af2f-57e3b4ae6dbc"/>
         <effect name="dlbvol" library="dlbvol" uuid="ae4b7b52-c3d3-4f1a-9766-428c4c599e7c"/>
         <!-- 360 Reality Audio Upmix -->
-        <effect name="tsrupmix" library="tsrupmix" uuid="c2776107-b9a7-4d70-b630-bb935d743faa"/>
+        <effect name="tsrupmix" library="tsrupmix" uuid="eced456e-a166-fcf1-5c7b-44a2701daa1c"/>
     </effects>
     <postprocess>
         <stream type="music">
